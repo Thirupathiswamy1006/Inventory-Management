@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Inventory Management</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f4f4f4;
+        margin: 0;
+        padding: 20px;
+    }
+    .container {
+        max-width: 800px;
+        margin: auto;
+        background: white;
+        padding: 20px;
+        border-radius: 5px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    h1 {
+        text-align: center;
+        color:rgb(21, 96, 71);
+    }
+    .product-form {
+        margin-bottom: 20px;
+    }
+    .product-form input {
+        width: calc(100% - 22px);
+        padding: 10px;
+        margin-bottom: 10px;
+    }
+    .product-form button {
+        padding: 10px;
+        background-color: #189435;
+        color: white;
+        border: none;
+        cursor: pointer;
+        border-radius: 5px;
+    }
+    .product-list table {
+        width: 100%;
+        border-collapse: collapse;
+    }
+    .product-list th, .product-list td {
+        border: 1px solid #ddd;
+        padding: 8px;
+    }
+
+</style>
+<body>
+    <div class="container">
+        <h1>📦 Inventory Manager</h1>
+        
+        <div class="product-form">
+            <h2>Add New Product</h2>
+            <input type="text" id="name" placeholder="Product Name">
+            <input type="text" id="description" placeholder="Description">
+            <input type="text" id="supplier" placeholder="Supplier">
+            <input type="number" id="price" placeholder="Price">
+            <input type="number" id="quantity" placeholder="Quantity">
+            <button onclick="addProduct()">Add Product</button>
+        </div>
+
+        <div class="product-list">
+            <h2>Current Inventory</h2>
+            <table id="inventoryTable">
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Description</th>
+                        <th>Supplier</th>
+                        <th>Price</th>
+                        <th>Qty</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody id="productTableBody"></tbody>
+            </table>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
